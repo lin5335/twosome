@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+body {
+    font-family: Noto Sans KR, Arial, Helvetica, sans-serif;
+    overflow-x: hidden; 
+}
+
+/* 내비게이션 영역 */
+
+#top {
+    background-color: rgba(255, 255, 255, 255);
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background-image: url("../images/twosome/logo1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {		
+	background:linear-gradient(white, white );
+	height:80px;
+	overflow:hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 80px;
+}
+
+nav {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    line-height: 80px;
+}
+
+.menu li ul li a {
+    line-height: 50px;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.submenu {
+    width: 100%;
+    position: absolute;
+}
+
+.submenu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    min-width: max-content;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.menu > li > a {
+    font-size: 20px;
+}
+
+nav > ul > li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    width: 0;
+    height: 3px;
+    background-color: #d50037;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav > ul > li:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+/* .language 버튼에서는 밑줄 제거 */
+.language {
+    position: relative;
+}
+
+.language::after {
+    display: none !important;
+}
+
+.language button {
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language button span {
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.language button:hover {
+    background-color: #f0f0f0; /* 호버 시 배경 색상 */
+}
+
+
+
+/* one */
+
+#one img {
+    display: block;
+}
+
+
+
+/* two */
+
+#two {
+    position: relative;
+    text-align: center;
+    color: white; /* 텍스트를 흰색으로 설정 */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#two .image-container {
+    position: relative;
+}
+
+#two img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#two .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#two h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    line-height: 60px;
+}
+
+#two h2::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: white;
+    margin: 20px auto;
+}
+
+#two p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+#two .buttons button {
+    width: 220px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#two .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#two .buttons button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+
+
+/* three */
+
+#three {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: -2px;
+    margin-bottom: -1px;
+}
+
+#three .image-container {
+    position: relative;
+}
+
+#three img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#three .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#three h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    line-height: 50px;
+}
+
+#three h2::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: white;
+    margin: 20px auto; /* 위 여백 10px, 아래는 0, 가운데 정렬 */
+}
+
+#three p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#three .buttons button {
+    width: 220px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#three .buttons button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+
+
+/* footer */
+
+#footer {
+    background-color: #2c2a29;
+    color: #ccc;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 10px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 링크 간격 */
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a.active {
+    color: #ffc107;
+}
+
+.footer-links ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.footer-info {
+    line-height: 23px;
+    color: #8b8b8b;
+}
+
+.footer-info::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #434242;
+}
+
+.footer-logo {
+    width: 250px;
+    height: 17px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-image: url("../images/twosome/logo2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-info p:last-child {
+    margin-top: 20px;
+}
